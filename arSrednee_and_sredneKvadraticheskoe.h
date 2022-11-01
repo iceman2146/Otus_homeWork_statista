@@ -61,11 +61,15 @@ public:
 		//	temp_sum += ((input_array[i] - (sum / numCounter)) * (input_array[i] - (sum / numCounter))) / numCounter;
 		// }
 		std::vector<double> new_arr;
-		for each(double var in input_arr)
+		/*for each(double var in input_arr)
+		{
+			std::cout<<" . ";
+			temp_sum+=(var-mean)*(var-mean);	
+		}*/
+		for(int i=0;i<input_arr.size();i++)
 		{
 			
-			temp_sum+=(var-mean)*(var-mean);
-			
+			temp_sum+=(input_arr[i]-mean)*(input_arr[i]-mean);
 		}
 		temp_sum=temp_sum/input_arr.size();
 
